@@ -1,0 +1,244 @@
+:root {
+    --primary: #e36c22;
+    --primary-dark: #e36c22;
+    --primary-light: #E8F8F0;
+    --bg-color: #F4F9F6;
+    --text-main: #2C3E50;
+    --text-light: #7F8C8D;
+    --white: #FFFFFF;
+    --border: #E2E8F0;
+    --shadow: 0 10px 30px rgba(46, 204, 113, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #FAFAFA;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.15);
+}
+
+input::placeholder {
+    color: #A0AEC0;
+}
+
+.btn {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(46, 204, 113, 0.2);
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(46, 204, 113, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.result-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px dashed var(--border);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.result-card {
+    background-color: var(--primary-light);
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.result-row:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.value {
+    color: var(--text-main);
+}
+
+.font-bold {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.badge.underweight {
+    background-color: #f4f141;
+}
+
+.badge.normal {
+    background-color: var(--primary);
+}
+
+.badge.overweight {
+    background-color: #EF4444;
+}
+
+.diet-plan h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+}
+
+.diet-plan ul {
+    list-style: none;
+}
+
+.diet-plan li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.diet-plan li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
