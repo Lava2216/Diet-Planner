@@ -1,5 +1,5 @@
 ## Project Link
-https://github.com/Lava2216/Diet-Planner
+[Click Here to View Project](https://github.com/Lava2216/Diet-Planner)
 
 # Smart Diet Planner
 
