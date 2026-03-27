@@ -1,3 +1,6 @@
+## Project Link
+https://github.com/Lava2216/Diet-Planner
+
 # Smart Diet Planner
 
 This is a frontend web application that calculates BMI and provides diet suggestions based on user input.
